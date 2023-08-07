@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
-const router = express.Router();
+const userRouter = require("./routes/users.route")
 
-router.get("/",(req,res)=>{
-    res.send("this server is running");
-})
-module.exports = router;
+app.use(userRouter);
+module.exports = app;
+
+
